@@ -65,27 +65,27 @@ Outputs:
     Value: !GetAtt createWorkspace.PricingTier
 
 Parameters:
-  AccountId:
+  #AccountId:
     Description: "Find your account ID at https://accounts.cloud.databricks.com"
     AllowedPattern: "^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$"
     MinLength: "36"
     Type: AWS::SSM::Parameter
   #parameter-store:
    # default: "AccountId"
-  Username:
+ # Username:
     Description: "Your case-sensitive Databricks account email address."
     AllowedPattern: "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"
     ConstraintDescription: Must be a valid email format.
     MinLength: "8"
     Type: String
    # Default: "Username"
-  Password:
+  #Password:
     Description: "This is the password you set for your Databricks account."
     MinLength: "8"
     NoEcho: "true"
     Type: String
    # Default: "Password"
-  WorkspaceName:
+  #WorkspaceName:
     Description: "Human-readable name for this workspace."
     MinLength: "1"
     MaxLength: "64"
