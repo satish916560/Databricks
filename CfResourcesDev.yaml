@@ -4,9 +4,6 @@ Description: >-
   Set up resources and deploy a Databricks workspace in your AWS account.
   If you encounter any errors during the process, reach out to quickstart-support@databricks.com.
   Visit this Databricks Community post for troubleshooting guidance: https://dbricks.co/AWSQuickStartHelp.
-
-Metadata:
-  AWS::CloudFormation::Interface:
     
 Outputs:
   DatabricksAccountId:
