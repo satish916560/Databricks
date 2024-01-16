@@ -64,7 +64,7 @@ Outputs:
     Description: The pricing tier of the workspace. See https://databricks.com/product/aws-pricing.
     Value: !GetAtt createWorkspace.PricingTier
 
-Parameters:
+#Parameters:
   #AccountId:
     Description: "Find your account ID at https://accounts.cloud.databricks.com"
     AllowedPattern: "^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$"
