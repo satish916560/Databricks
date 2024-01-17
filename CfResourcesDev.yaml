@@ -4,7 +4,30 @@ Description: >-
   Set up resources and deploy a Databricks workspace in your AWS account.
   If you encounter any errors during the process, reach out to quickstart-support@databricks.com.
   Visit this Databricks Community post for troubleshooting guidance: https://dbricks.co/AWSQuickStartHelp.
-    
+
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: "Databricks Account Credentials"
+        Parameters:
+          - AccountId
+          - Username
+          - Password
+      - Label:
+          default: "Workspace configuration"
+        Parameters:
+          - WorkspaceName
+    ParameterLabels:
+      AccountId:
+        default: Databricks account ID
+      Username:
+        default: Databricks account email address
+      Password:
+        default: Databricks account password
+      WorkspaceName:
+        default: Workspace name
+
 Outputs:
   DatabricksAccountId:
     Description: Databricks account ID
@@ -41,6 +64,32 @@ Outputs:
     Description: The pricing tier of the workspace. See https://databricks.com/product/aws-pricing.
     Value: !GetAtt createWorkspace.PricingTier
 
+Parameters:
+  AccountId:
+    Description: "Find your account ID at https://accounts.cloud.databricks.com"
+    AllowedPattern: "^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$"
+    MinLength: "36"
+    Type: String
+    Default: "bba4d21a-de6a-4149-b720-73d4a63861d4"
+  Username:
+    Description: "Your case-sensitive Databricks account email address."
+    AllowedPattern: "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"
+    ConstraintDescription: Must be a valid email format.
+    MinLength: "8"
+    Type: String
+    Default: "satish.engineer916@gmail.com"
+  Password:
+    Description: "This is the password you set for your Databricks account."
+    MinLength: "8"
+    NoEcho: "true"
+    Type: String
+    Default: "Dev@ops$560"
+  WorkspaceName:
+    Description: "Human-readable name for this workspace."
+    MinLength: "1"
+    MaxLength: "64"
+    Type: String
+    Default: DbTest
 
 Resources:
   # Workspace cross-account IAM role for Databricks-created and -managed VPC.
