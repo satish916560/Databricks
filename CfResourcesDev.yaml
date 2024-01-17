@@ -218,10 +218,10 @@ Resources:
     Properties:
       BucketName: !Sub ${AWS::StackName}-bucket
       PublicAccessBlockConfiguration:
-        BlockPublicAcls: false
-        BlockPublicPolicy: false
-        IgnorePublicAcls: false
-        RestrictPublicBuckets: false
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
   workspaceS3BucketPolicy:
     Type: "AWS::S3::BucketPolicy"
     Properties:
