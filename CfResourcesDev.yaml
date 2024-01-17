@@ -70,14 +70,14 @@ Parameters:
     AllowedPattern: "^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$"
     MinLength: "36"
     Type: String
-    Default: "bba4d21a-de6a-4149-b720-73d4a63861d4"
+    Default: "4c366eb9-96fe-4fe5-bb39-100d33a41b2e"
   Username:
     Description: "Your case-sensitive Databricks account email address."
     AllowedPattern: "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"
     ConstraintDescription: Must be a valid email format.
     MinLength: "8"
     Type: String
-    Default: "satish.engineer916@gmail.com"
+    Default: "satish916.m@gmail.com"
   Password:
     Description: "This is the password you set for your Databricks account."
     MinLength: "8"
@@ -89,7 +89,7 @@ Parameters:
     MinLength: "1"
     MaxLength: "64"
     Type: String
-    Default: DbTest
+    Default: DevDatabricksResourceCreation
 
 Resources:
   # Workspace cross-account IAM role for Databricks-created and -managed VPC.
