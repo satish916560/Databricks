@@ -47,7 +47,7 @@ Outputs:
   NetworkId:
     Description: Databricks network ID
    # Condition: CustomerManagedVPC
-    Value: !Ref createNetworks
+    Value: !GetAtt createNetworks
   StorageConfigId:
     Description: Storage configuration ID
     Value: !GetAtt createStorageConfiguration.StorageConfigId
