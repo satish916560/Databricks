@@ -94,6 +94,9 @@ Parameters:
     MaxLength: "64"
     Type: String
     Default: "devdbrproj"
+Conditions:
+  # Set condition when VPC ID is provided by the user
+  CustomerManagedVPC: !Not [!Equals [!Ref VPCID, '']]
 
 Resources:
   # Workspace cross-account IAM role for Databricks-created and -managed VPC.
