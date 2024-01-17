@@ -89,7 +89,7 @@ Parameters:
     MinLength: "1"
     MaxLength: "64"
     Type: String
-    Default: DevDatabricksResourceCreation
+    Default: "DatabrciksResource"
 
 Resources:
   # Workspace cross-account IAM role for Databricks-created and -managed VPC.
