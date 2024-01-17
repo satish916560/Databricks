@@ -354,7 +354,7 @@ Resources:
       accountId: !Ref AccountId
       workspace_name: !Ref WorkspaceName
       deployment_name: ""
-      aws_region: us-west-2
+      aws_region: !Ref AWS::Region
       credentials_id: !GetAtt createCredentials.CredentialsId
       storage_config_id: !GetAtt createStorageConfiguration.StorageConfigId
       encodedbase64:
