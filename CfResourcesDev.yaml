@@ -44,6 +44,10 @@ Outputs:
   CredentialsId:
     Description: Credential ID
     Value: !GetAtt createCredentials.CredentialsId
+  NetworkId:
+    Description: Databricks network ID
+    Condition: CustomerManagedVPC
+    Value: !Ref createNetworks
   StorageConfigId:
     Description: Storage configuration ID
     Value: !GetAtt createStorageConfiguration.StorageConfigId
