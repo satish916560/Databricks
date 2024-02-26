@@ -74,14 +74,14 @@ Parameters:
     AllowedPattern: "^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$"
     MinLength: "36"
     Type: String
-    Default: "4c366eb9-96fe-4fe5-bb39-100d33a41b2e"
+    Default: "fa29d6a9-6bbc-4119-9407-bf231386f341"
   Username:
     Description: "Your case-sensitive Databricks account email address."
     AllowedPattern: "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"
     ConstraintDescription: Must be a valid email format.
     MinLength: "8"
     Type: String
-    Default: "satish916.m@gmail.com"
+    Default: "satish560.computers@gmail.com"
   Password:
     Description: "This is the password you set for your Databricks account."
     MinLength: "8"
